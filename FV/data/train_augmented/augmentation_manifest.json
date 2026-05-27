@@ -1,0 +1,86 @@
+{
+  "created_at": "2026-05-26T20:45:35",
+  "input": "D:\\2026_spring\\NLP\\NLP_Final\\FV\\data\\split\\raw_train.jsonl",
+  "output_dir": "D:\\2026_spring\\NLP\\NLP_Final\\FV\\data\\train_augmented",
+  "seed": 42,
+  "instruction_rewrites": 2,
+  "shuffle_options": true,
+  "dev_path": "D:\\2026_spring\\NLP\\NLP_Final\\FV\\data\\split\\dev_original.jsonl",
+  "variants": {
+    "train_original": {
+      "count": 570,
+      "by_aug_type": {
+        "original": 570
+      },
+      "by_subject_area": {
+        "Current_Politics": 85,
+        "Ethics": 54,
+        "History": 64,
+        "Mao": 191,
+        "Marxism": 176
+      },
+      "by_question_type": {
+        "multiple": 291,
+        "single": 279
+      }
+    },
+    "train_instruction_rewrite": {
+      "count": 1710,
+      "by_aug_type": {
+        "original": 570,
+        "rewrite_instruction_1": 570,
+        "rewrite_instruction_2": 570
+      },
+      "by_subject_area": {
+        "Current_Politics": 255,
+        "Ethics": 162,
+        "History": 192,
+        "Mao": 573,
+        "Marxism": 528
+      },
+      "by_question_type": {
+        "multiple": 873,
+        "single": 837
+      }
+    },
+    "train_shuffle_options": {
+      "count": 1109,
+      "by_aug_type": {
+        "original": 570,
+        "shuffle_options": 539
+      },
+      "by_subject_area": {
+        "Current_Politics": 168,
+        "Ethics": 106,
+        "History": 123,
+        "Mao": 372,
+        "Marxism": 340
+      },
+      "by_question_type": {
+        "multiple": 570,
+        "single": 539
+      }
+    },
+    "train_augmented": {
+      "count": 2249,
+      "by_aug_type": {
+        "original": 570,
+        "rewrite_instruction_1": 570,
+        "rewrite_instruction_2": 570,
+        "shuffle_options": 539
+      },
+      "by_subject_area": {
+        "Current_Politics": 338,
+        "Ethics": 214,
+        "History": 251,
+        "Mao": 754,
+        "Marxism": 692
+      },
+      "by_question_type": {
+        "multiple": 1152,
+        "single": 1097
+      }
+    }
+  },
+  "no_dev_overlap": true
+}

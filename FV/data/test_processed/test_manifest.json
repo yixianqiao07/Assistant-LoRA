@@ -1,0 +1,30 @@
+{
+  "created_at": "2026-05-26T18:18:15",
+  "input": "D:\\2026_spring\\NLP\\NLP_Final\\FV\\data\\test\\test_updated.jsonl",
+  "output_dir": "D:\\2026_spring\\NLP\\NLP_Final\\FV\\data\\test_processed",
+  "test": {
+    "count": 99,
+    "by_year": {
+      "2024": 33,
+      "2025": 33,
+      "2026": 33
+    },
+    "by_question_type": {
+      "multiple": 51,
+      "single": 48
+    },
+    "by_subject_area": {
+      "Current_Politics": 11,
+      "Ethics": 9,
+      "History": 20,
+      "Mao": 33,
+      "Marxism": 26
+    }
+  },
+  "train_hash_overlap_count": 0,
+  "dev_hash_overlap_count": 0,
+  "train_hash_overlap_examples": [],
+  "dev_hash_overlap_examples": [],
+  "no_train_test_content_hash_overlap": true,
+  "no_dev_test_content_hash_overlap": true
+}

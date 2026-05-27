@@ -1,0 +1,96 @@
+{
+  "model": {
+    "name": "Qwen2.5-1.5B",
+    "path": "models/qwen2.5-1.5b",
+    "device": "cuda:0",
+    "multi_gpu": false,
+    "quantize_4bit": false
+  },
+  "data": {
+    "default_train_path": "data/train_augmented/train_augmented.jsonl",
+    "dev_path": "data/split/dev_original.jsonl"
+  },
+  "output_dir": "outputs/ablation",
+  "defaults": {
+    "epochs": 3,
+    "batch_size": 4,
+    "grad_accum": 4,
+    "max_len": 512,
+    "val_every": 40,
+    "val_batch_size": 2,
+    "max_new_tokens": 128,
+    "lr": 0.0002,
+    "rank": 16,
+    "alpha": 32,
+    "dropout": 0.05,
+    "warmup_ratio": 0.1,
+    "weight_decay": 0.01,
+    "seed": 42
+  },
+  "experiments": [
+    {
+      "tag": "data_original_only",
+      "group": "data_augmentation",
+      "train_path": "data/train_augmented/train_original.jsonl",
+      "description": "Train on original samples only"
+    },
+    {
+      "tag": "data_instruction_rewrite",
+      "group": "data_augmentation",
+      "train_path": "data/train_augmented/train_instruction_rewrite.jsonl",
+      "description": "Train on original samples plus instruction rewrite"
+    },
+    {
+      "tag": "data_shuffle_options",
+      "group": "data_augmentation",
+      "train_path": "data/train_augmented/train_shuffle_options.jsonl",
+      "description": "Train on original samples plus option shuffling"
+    },
+    {
+      "tag": "data_full_augmented",
+      "group": "data_augmentation",
+      "train_path": "data/train_augmented/train_augmented.jsonl",
+      "description": "Train on original samples plus all augmentation"
+    },
+    {
+      "tag": "rank16_lr2e-4_ep3",
+      "group": "hyperparameter",
+      "description": "Default LoRA baseline"
+    },
+    {
+      "tag": "rank8_lr2e-4_ep3",
+      "group": "hyperparameter",
+      "rank": 8,
+      "alpha": 16,
+      "description": "Smaller LoRA rank"
+    },
+    {
+      "tag": "rank16_lr1e-4_ep3",
+      "group": "hyperparameter",
+      "lr": 0.0001,
+      "description": "Lower learning rate"
+    },
+    {
+      "tag": "rank8_lr1e-4_ep3",
+      "group": "hyperparameter",
+      "rank": 8,
+      "alpha": 16,
+      "lr": 0.0001,
+      "description": "Smaller rank and lower learning rate"
+    },
+    {
+      "tag": "rank16_lr2e-4_ep2",
+      "group": "hyperparameter",
+      "epochs": 2,
+      "description": "Fewer epochs"
+    },
+    {
+      "tag": "rank8_lr2e-4_ep2",
+      "group": "hyperparameter",
+      "rank": 8,
+      "alpha": 16,
+      "epochs": 2,
+      "description": "Smaller rank and fewer epochs"
+    }
+  ]
+}

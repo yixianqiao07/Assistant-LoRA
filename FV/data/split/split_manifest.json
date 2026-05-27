@@ -1,0 +1,112 @@
+{
+  "created_at": "2026-05-26T17:59:39",
+  "input": "D:\\2026_spring\\NLP\\NLP_Final\\FV\\data\\labled.jsonl",
+  "output_dir": "D:\\2026_spring\\NLP\\NLP_Final\\FV\\data\\split",
+  "seed": 42,
+  "dev_ratio": 0.12,
+  "stratify_fields": [
+    "subject_area",
+    "question_type"
+  ],
+  "total": 648,
+  "train": {
+    "count": 570,
+    "by_year": {
+      "2003": 27,
+      "2004": 28,
+      "2005": 28,
+      "2006": 28,
+      "2007": 18,
+      "2008": 23,
+      "2009": 29,
+      "2010": 31,
+      "2011": 25,
+      "2012": 23,
+      "2013": 28,
+      "2014": 29,
+      "2015": 28,
+      "2016": 31,
+      "2017": 29,
+      "2018": 27,
+      "2019": 23,
+      "2020": 25,
+      "2021": 30,
+      "2022": 32,
+      "2023": 28
+    },
+    "by_question_type": {
+      "multiple": 291,
+      "single": 279
+    },
+    "by_subject_area": {
+      "Current_Politics": 85,
+      "Ethics": 54,
+      "History": 64,
+      "Mao": 191,
+      "Marxism": 176
+    },
+    "by_stratify_group": {
+      "Current_Politics | multiple": 41,
+      "Current_Politics | single": 44,
+      "Ethics | multiple": 26,
+      "Ethics | single": 28,
+      "History | multiple": 34,
+      "History | single": 30,
+      "Mao | multiple": 104,
+      "Mao | single": 87,
+      "Marxism | multiple": 86,
+      "Marxism | single": 90
+    }
+  },
+  "dev": {
+    "count": 78,
+    "by_year": {
+      "2003": 3,
+      "2004": 2,
+      "2005": 2,
+      "2006": 1,
+      "2007": 6,
+      "2008": 5,
+      "2009": 2,
+      "2010": 2,
+      "2011": 5,
+      "2012": 9,
+      "2013": 4,
+      "2014": 3,
+      "2015": 4,
+      "2016": 1,
+      "2017": 4,
+      "2018": 6,
+      "2019": 6,
+      "2020": 4,
+      "2021": 3,
+      "2022": 1,
+      "2023": 5
+    },
+    "by_question_type": {
+      "multiple": 40,
+      "single": 38
+    },
+    "by_subject_area": {
+      "Current_Politics": 12,
+      "Ethics": 8,
+      "History": 8,
+      "Mao": 26,
+      "Marxism": 24
+    },
+    "by_stratify_group": {
+      "Current_Politics | multiple": 6,
+      "Current_Politics | single": 6,
+      "Ethics | multiple": 4,
+      "Ethics | single": 4,
+      "History | multiple": 4,
+      "History | single": 4,
+      "Mao | multiple": 14,
+      "Mao | single": 12,
+      "Marxism | multiple": 12,
+      "Marxism | single": 12
+    }
+  },
+  "no_source_id_overlap": true,
+  "no_content_hash_overlap": true
+}
